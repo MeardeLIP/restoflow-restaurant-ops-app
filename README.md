@@ -39,13 +39,7 @@ Restoflow - это система для операционной работы �
 ## 📱 Демо приложения (9:16)
 
 <p align="center">
-  <a href="./docs/restoflow.mp4">
-    <img src="./docs/demo-preview.svg" alt="Смотреть демо Restoflow (9:16)" width="360" />
-  </a>
-</p>
-
-<p align="center">
-  <a href="./docs/restoflow.mp4"><b>▶ Смотреть демо-видео</b></a>
+  <img src="./docs/restoflow-demo.gif" alt="Демо Restoflow 9:16" width="360" />
 </p>
 
 ## 🖥️ TV-display (кухня)
@@ -62,6 +56,7 @@ Restoflow - это система для операционной работы �
 
 Медиафайлы находятся в `docs/`:
 - `docs/restoflow.mp4`
+- `docs/restoflow-demo.gif`
 - `docs/tvdisplay.png`
 
 ## ⚠️ Лицензия и доступ
