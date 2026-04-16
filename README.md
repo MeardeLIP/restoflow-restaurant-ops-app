@@ -38,13 +38,16 @@ Restoflow - это система для операционной работы �
 
 ## 📱 Демо приложения (9:16)
 
-![Демо Restoflow 9:16](./docs/restoflow-demo.gif)
+<p align="center">
+  <img src="./docs/restoflow-demo.gif" alt="Демо Restoflow 9:16" width="280" />
+</p>
 
 Если GIF не отображается, открой напрямую: [`docs/restoflow-demo.gif`](./docs/restoflow-demo.gif)
 
 > [!NOTE]
 > Встроенный просмотр на GitHub может подлагивать из-за ограничений браузера.
-> Полная версия видео (исходное качество): [`docs/restoran.mp4`](./docs/restoran.mp4)
+> Версия для просмотра на GitHub: [`docs/restoflow-github.mp4`](./docs/restoflow-github.mp4)
+> Исходное видео (большой файл, может открываться только через Raw/скачивание): [`docs/restoran.mp4`](./docs/restoran.mp4)
 
 ## 🖥️ TV-display (кухня)
 
