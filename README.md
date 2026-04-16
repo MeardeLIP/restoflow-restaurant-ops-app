@@ -1,53 +1,65 @@
-﻿# Restoflow Restaurant Ops App
+﻿# Restoflow: система управления рестораном
 
-Restaurant operations system for service teams: mobile workflow, real-time order processing, and TV kitchen display.
+> [!IMPORTANT]
+> **Публикация:** здесь размещены описание проекта и демо-материалы для портфолио.  
+> **Исходный код в репозиторий не выкладывается** (коммерческая разработка, передача заказчику).
 
-## Overview
+## 💡 Кратко
 
-This repository is a showcase of a production restaurant app delivered for a real business workflow.
+Restoflow - это система для операционной работы ресторана: мобильное приложение для команды, backend API и TV-display для кухни.
 
-The system includes:
-- Mobile roles: waiter, kitchen, admin, director
-- Backend API for auth, menu, orders, and analytics
-- Realtime events via WebSocket / Socket.IO
-- TV display for live kitchen queue updates
+Проект закрывает полный поток обработки заказа: создание, передача на кухню, смена статусов в реальном времени и отображение очереди на экране.
 
-## Demo Block
+## ✅ Что реализовано
 
-### Mobile Demo (9:16)
+- Мобильные роли: официант, кухня, администратор, директор.
+- Работа с заказами: создание, изменение статуса, отмена.
+- Realtime-синхронизация между клиентами через WebSocket.
+- Отдельный TV-display для кухни с живой очередью заказов.
+- Backend API для авторизации, меню, заказов и аналитики.
+- Подготовка окружения под production (Docker/Nginx/PostgreSQL/Redis).
+
+## 🔌 API и интеграции
+
+- REST API для мобильного клиента и панели управления.
+- Socket.IO / WebSocket для событий `order:new`, `order:updated`, `order:ready`, `order:cancelled`.
+- Клиентские экраны подписаны на realtime-события и обновляются без перезагрузки.
+
+## 🧰 Технологии
+
+| Категория | Стек |
+|---|---|
+| Mobile | React Native, Redux |
+| Backend | Node.js, Express |
+| Realtime | Socket.IO, WebSocket |
+| База данных | PostgreSQL |
+| Кэш/очереди | Redis |
+| Инфраструктура | Docker, Nginx |
+
+## 📱 Демо приложения (9:16)
 
 <p align="center">
-  <video src="./docs/restoflow.mp4" width="320" controls playsinline preload="metadata"></video>
+  <video src="./docs/restoflow.mp4" width="340" controls playsinline preload="metadata"></video>
 </p>
+
+## 🖥️ TV-display (кухня)
 
 <p align="center">
-  If the player is not shown in your browser, open the file directly:
-  <a href="./docs/restoflow.mp4">restoflow.mp4</a>
+  <img src="./docs/tvdisplay.png" alt="Restoflow TV display" width="920" />
 </p>
 
-### TV Display
+## 🤝 Роль и формат работы
 
-<p align="center">
-  <img src="./docs/tvdisplay.png" alt="Restoflow TV display screen" width="880" />
-</p>
+Коммерческий проект под задачи ресторанного бизнеса: реализация по ТЗ, итеративные доработки, настройка окружения и сопровождение запуска.
 
-## Key Flows
+## 📁 Материалы
 
-- Waiter creates and updates orders from mobile
-- Kitchen receives new orders in real time
-- Order statuses are synced instantly across all clients
-- TV display auto-refreshes queue state for kitchen visibility
+Медиафайлы находятся в `docs/`:
+- `docs/restoflow.mp4`
+- `docs/tvdisplay.png`
 
-## Tech Stack
+## ⚠️ Лицензия и доступ
 
-- Frontend Mobile: React Native, Redux
-- Backend: Node.js, Express
-- Realtime: Socket.IO / WebSocket
-- Database: PostgreSQL
-- Cache / Queue support: Redis
-- Deployment: Docker, Nginx
-
-## Notes
-
-- This repository is a showcase version (media + project description).
-- Source code is not published due to commercial delivery constraints.
+> [!CAUTION]
+> Репозиторий создан как портфолио-кейс.  
+> Копирование или использование исходного кода третьими лицами из этого репозитория не предполагается (кода в публичном доступе нет).
