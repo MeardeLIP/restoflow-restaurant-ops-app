@@ -38,15 +38,13 @@ Restoflow - это система для операционной работы �
 
 ## 📱 Демо приложения (9:16)
 
-<p align="center">
-  <video src="./docs/restoflow-github.mp4" controls muted playsinline preload="metadata" width="360"></video>
-</p>
+![Демо Restoflow 9:16](./docs/restoflow-demo.gif)
 
-Если встроенное видео не отображается, открой напрямую: [`docs/restoflow-github.mp4`](./docs/restoflow-github.mp4)
+Если GIF не отображается, открой напрямую: [`docs/restoflow-demo.gif`](./docs/restoflow-demo.gif)
 
 > [!NOTE]
-> Встроенный плеер GitHub иногда воспроизводит видео с лагами из-за стриминга и ограничений браузера.
-> Полная версия (исходное качество, без дополнительного сжатия): [`docs/restoflow-full.mp4`](./docs/restoflow-full.mp4)
+> Встроенный просмотр на GitHub может подлагивать из-за ограничений браузера.
+> Полная версия видео (исходное качество): [`docs/restoran.mp4`](./docs/restoran.mp4)
 
 ## 🖥️ TV-display (кухня)
 
@@ -63,6 +61,7 @@ Restoflow - это система для операционной работы �
 Медиафайлы находятся в `docs/`:
 - `docs/restoflow.mp4`
 - `docs/restoflow-full.mp4`
+- `docs/restoran.mp4`
 - `docs/restoflow-smooth.mp4`
 - `docs/restoflow-github.mp4`
 - `docs/restoflow-lite.mp4`
