@@ -38,7 +38,15 @@ Restoflow - это система для операционной работы �
 
 ## 📱 Демо приложения (9:16)
 
-![Демо Restoflow 9:16](./docs/restoflow-demo.gif)
+<p align="center">
+  <video src="./docs/restoflow-github.mp4" controls muted playsinline preload="metadata" width="360"></video>
+</p>
+
+Если встроенное видео не отображается, открой напрямую: [`docs/restoflow-github.mp4`](./docs/restoflow-github.mp4)
+
+> [!NOTE]
+> Встроенный плеер GitHub иногда воспроизводит видео с лагами из-за стриминга и ограничений браузера.
+> Полная версия (исходное качество, без дополнительного сжатия): [`docs/restoflow-full.mp4`](./docs/restoflow-full.mp4)
 
 ## 🖥️ TV-display (кухня)
 
@@ -54,8 +62,36 @@ Restoflow - это система для операционной работы �
 
 Медиафайлы находятся в `docs/`:
 - `docs/restoflow.mp4`
+- `docs/restoflow-full.mp4`
+- `docs/restoflow-smooth.mp4`
+- `docs/restoflow-github.mp4`
+- `docs/restoflow-lite.mp4`
 - `docs/restoflow-demo.gif`
 - `docs/tvdisplay.png`
+
+### Рекомендованный экспорт через FFmpeg (плавно и качественно)
+
+```bash
+ffmpeg -i input.mp4 -vf "fps=60,scale=1080:-2:flags=lanczos,format=yuv420p" -c:v libx264 -profile:v high -level 5.2 -preset slow -crf 18 -movflags +faststart docs/restoflow-smooth.mp4
+```
+
+Для GitHub (максимально плавно в веб-плеере, меньше лагов):
+
+```bash
+ffmpeg -i input.mp4 -vf "fps=60,scale=720:-2:flags=lanczos,format=yuv420p" -c:v libx264 -preset medium -crf 20 -profile:v high -level 4.1 -tune fastdecode -x264-params "keyint=120:min-keyint=120:scenecut=0:ref=3" -movflags +faststart docs/restoflow-github.mp4
+```
+
+Если всё ещё подлагивает на слабых устройствах/сети:
+
+```bash
+ffmpeg -i input.mp4 -vf "fps=60,scale=540:-2:flags=lanczos,format=yuv420p" -c:v libx264 -preset veryfast -crf 23 -maxrate 900k -bufsize 1800k -profile:v high -level 4.0 -x264-params "keyint=60:min-keyint=60:scenecut=0:ref=2:bframes=2" -movflags +faststart docs/restoflow-lite.mp4
+```
+
+Для GIF-превью (если нужно именно GIF):
+
+```bash
+ffmpeg -ss 00:00:02 -t 00:00:14 -i docs/restoflow-smooth.mp4 -vf "fps=30,scale=432:-1:flags=lanczos,split[s0][s1];[s0]palettegen=max_colors=256[p];[s1][p]paletteuse=dither=sierra2_4a" -loop 0 docs/restoflow-demo.gif
+```
 
 ## ⚠️ Лицензия и доступ
 
