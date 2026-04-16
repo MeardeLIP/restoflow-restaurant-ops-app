@@ -41,7 +41,7 @@ Restoflow - это система для операционной работы �
 ## 📱 Демо приложения (9:16)
 
 <p align="center">
-  <img src="./docs/restoflow-demo.gif" alt="Демо Restoflow 9:16" width="280" />
+  <img src="./docs/restoflow-demo-rounded.gif" alt="Демо Restoflow 9:16" width="280" />
 </p>
 
 > [!NOTE]
@@ -74,6 +74,7 @@ Restoflow - это система для операционной работы �
 - `docs/restoflow-github.mp4`
 - `docs/restoflow-lite.mp4`
 - `docs/restoflow-demo.gif`
+- `docs/restoflow-demo-rounded.gif`
 - `docs/tvdisplay.png`
 
 ## ⚠️ Лицензия и доступ
